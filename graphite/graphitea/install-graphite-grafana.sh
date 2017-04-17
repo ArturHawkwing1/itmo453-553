@@ -7,22 +7,15 @@ sudo apt-get update -y
 sudo apt-get install -y apt-transport-https
 sudo DEBIAN_FRONTEND=noninteractive apt-get -q -y --force-yes install graphite-carbon
 
-
-# P.134 - Listing 4.10: Adding the Graphite-API Package Cloudkey
-curl https://packagecloud.io/gpg.key | sudo apt-key add -
-
-# P.134 - Listing 4.11: Adding the Package Cloud exoscale repository listing
-sudo sh -c "echo deb https://packagecloud.io/exoscale/community/ubuntu/ trusty main > /etc/apt/sources.list.d/exoscale_community.list"
+#Install repo
+curl -s https://packagecloud.io/install/repositories/exoscale/community/script.deb.sh | sudo bash
 sudo apt-get update -y
 
 # P.135 - Listing 4.13: Installing the graphite-api package on Ubuntu
 sudo apt-get install -y graphite-api
 
-# P.136 - Listing 4.16: Adding the Grafana repository listing
-sudo sh -c "echo deb https://packagecloud.io/grafana/stable/debian/ wheezy main > /etc/apt/sources.list.d/packagecloud_grafana.list"
-
-# P.137 - Listing 4.17: Adding the Package Cloudkey
-curl https://packagecloud.io/gpg.key | sudo apt-key add -
+Adding the Grafana repository
+curl -s https://packagecloud.io/install/repositories/grafana/stable/script.deb.sh | sudo bash
 
 # P.137 - Listing 4.18: Installing the Grafana package
 sudo apt-get update -y
