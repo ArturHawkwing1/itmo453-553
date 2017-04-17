@@ -30,7 +30,7 @@ sudo pip install -U six pyparsing websocket urllib3
 sudo pip install graphite-api gunicorn
 
 #Install grafana repository
-curl -s https://packagecloud.io/install/repositories/grafana/stable/script.rpm.sh | sudo bash
+sudo curl -s https://packagecloud.io/install/repositories/grafana/stable/script.rpm.sh | sudo bash
 
 # Listing 4.21: Installing Grafana via Yum
 sudo yum install grafana

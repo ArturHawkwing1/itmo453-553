@@ -8,14 +8,14 @@ sudo apt-get install -y apt-transport-https
 sudo DEBIAN_FRONTEND=noninteractive apt-get -q -y --force-yes install graphite-carbon
 
 #Install repo
-curl -s https://packagecloud.io/install/repositories/exoscale/community/script.deb.sh | sudo bash
+sudo curl -s https://packagecloud.io/install/repositories/exoscale/community/script.deb.sh | sudo bash
 sudo apt-get update -y
 
 # P.135 - Listing 4.13: Installing the graphite-api package on Ubuntu
 sudo apt-get install -y graphite-api
 
 Adding the Grafana repository
-curl -s https://packagecloud.io/install/repositories/grafana/stable/script.deb.sh | sudo bash
+sudo curl -s https://packagecloud.io/install/repositories/grafana/stable/script.deb.sh | sudo bash
 
 # P.137 - Listing 4.18: Installing the Grafana package
 sudo apt-get update -y
