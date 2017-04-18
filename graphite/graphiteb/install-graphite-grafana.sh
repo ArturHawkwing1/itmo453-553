@@ -33,7 +33,7 @@ sudo pip install graphite-api gunicorn
 sudo curl -s https://packagecloud.io/install/repositories/grafana/stable/script.rpm.sh | sudo bash
 
 # Listing 4.21: Installing Grafana via Yum
-sudo yum install grafana
+sudo yum install grafana -y
 
 # P.153 - Listing 4-39 - Create empty conf file to avoid error
 sudo cp -v carbon.conf /etc/carbon
