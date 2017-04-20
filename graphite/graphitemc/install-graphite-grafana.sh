@@ -20,7 +20,7 @@ cd /home/vagrant/grafanainstall
 
 #Download grafana
 echo "downloading grafana"
-wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.2.0_amd64.deb
+sudo wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.2.0_amd64.deb
 
 #install libfontconfig
 sudo apt-get install -y adduser libfontconfig\
@@ -29,7 +29,7 @@ sudo apt-get install -y adduser libfontconfig\
 sudo dpkg -i grafana_4.2.0_amd64.deb
 
 #Move back to foulder
-cd /home/vagrant/itmo453-553/graphite/graphitea/
+cd /home/vagrant/itmo453-553/graphite/graphitemc/
 
 # P.153 - Listing 4-39 - Create empty conf file to avoid error
 sudo cp -v carbon.conf /etc/carbon
