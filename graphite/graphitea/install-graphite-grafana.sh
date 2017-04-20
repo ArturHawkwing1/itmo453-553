@@ -14,12 +14,22 @@ sudo apt-get update -y
 # P.135 - Listing 4.13: Installing the graphite-api package on Ubuntu
 sudo apt-get install -y graphite-api
 
-Adding the Grafana repository
-sudo curl -s https://packagecloud.io/install/repositories/grafana/stable/script.deb.sh | sudo bash
+#Make and move to foulder for grafana install
+mkdir /home/vagrant/grafanainstall
+cd /home/vagrant/grafanainstall
 
-# P.137 - Listing 4.18: Installing the Grafana package
-sudo apt-get update -y
-sudo apt-get install -y grafana
+#Download grafana
+echo "downloading grafana"
+wget https://s3-us-west-2.amazonaws.com/grafana-releases/release/grafana_4.2.0_amd64.deb
+
+#install libfontconfig
+sudo apt-get install -y adduser libfontconfig\
+
+#Install grafana
+sudo dpkg -i grafana_4.2.0_amd64.deb
+
+#Move back to foulder
+cd /home/vagrant/itmo453-553/graphite/graphitea/
 
 # P.153 - Listing 4-39 - Create empty conf file to avoid error
 sudo cp -v carbon.conf /etc/carbon

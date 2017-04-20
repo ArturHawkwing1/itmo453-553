@@ -3,7 +3,7 @@
         "name": "ubuntu-vanilla-14045-server",
         "type": "virtualbox-iso",
         "guest_os_type": "Ubuntu_64",
-        "guest_additions_mode": "disable",
+        "guest_additions_mode": "upload",
         "iso_url": "http://mirrors.kernel.org/ubuntu-releases/14.04.5/ubuntu-14.04.5-server-amd64.iso",
         "iso_checksum": "dde07d37647a1d2d9247e33f14e91acb10445a97578384896b4e1d985f754cc1",
         "iso_checksum_type": "sha256",
@@ -21,7 +21,7 @@
         "disk_size": 20000,
         "boot_wait": "5s",
  "boot_command" : [
-            "<esc><esc><enter><wait>",
+            "<esc><esc><enter><enter><wait>",
             "/install/vmlinuz noapic ",
             "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed/preseed.cfg ",
             "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
