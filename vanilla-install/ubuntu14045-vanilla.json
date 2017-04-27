@@ -19,9 +19,9 @@
         "vm_name": "ubuntu-vanilla-14045-server",
         "hard_drive_interface": "sata",
         "disk_size": 20000,
-        "boot_wait": "5s",
+        "boot_wait": "10s",
  "boot_command" : [
-            "<enter><esc><enter>",
+            "<esc><esc><enter><wait>",
             "/install/vmlinuz noapic ",
             "preseed/url=http://{{ .HTTPIP }}:{{ .HTTPPort }}/preseed/preseed.cfg ",
             "debian-installer=en_US auto locale=en_US kbd-chooser/method=us ",
